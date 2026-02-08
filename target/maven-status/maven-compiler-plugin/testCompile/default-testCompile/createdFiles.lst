@@ -1,0 +1,6 @@
+utils\BrowserFactory.class
+runners\TestRunner.class
+utils\ConfigReader.class
+stepdefinitions\BookStorePageSteps.class
+stepdefinitions\LoginPageSteps.class
+hooks\Hooks.class

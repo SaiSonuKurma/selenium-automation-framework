@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>STANDARD</theme>
+        <documentTitle>Automation Test Report</documentTitle>
+        <reportName>Cucumber TestNG Execution Report</reportName>
+        <timeStampFormat>dd-MMM-yyyy HH:mm:ss</timeStampFormat>
+    </configuration>
+</extentreports>

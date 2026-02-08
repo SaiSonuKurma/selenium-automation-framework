@@ -1,0 +1,3 @@
+com\pages\LoginPage.class
+com\pages\BookStorePage.class
+com\qa\factory\Driverfactory.class
