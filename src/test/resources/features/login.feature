@@ -1,9 +1,11 @@
 Feature: Login Page feature
 
+@smoke
 Scenario: Login Page title
 Given user is on login page
 When user gets the title of the page
-Then page title should be "DEMOQA"
+Then page title should be "demosite"
+
 
 Scenario: New User button
 Given user is on login page
@@ -15,4 +17,4 @@ When user enters username "saisonu"
 And user enters password "Sonu@2000"
 And user clicks on login
 When user gets the title of the page
-Then page title should be "DEMOQA"
+Then page title should be "demosite"
