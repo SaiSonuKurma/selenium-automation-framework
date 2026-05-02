@@ -8,7 +8,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.ElementActions;
 
 public class BookStorePageSteps {
 
@@ -38,10 +41,25 @@ public class BookStorePageSteps {
     }
 
     @And("User clicks on bookstore")
-    public void user_clicks_on_bookstore() {
-        // Write code here that turns the phrase above into concrete actions
-        bookStorePage.bookstoreicon();
+    public void user_clicks_on_bookstore() throws InterruptedException {
+        ElementActions actions = new ElementActions(driver);
+        actions.scrollAndClick(bookStorePage.bookstoreicon());
     }
+
+//    @And("User clicks on bookstore")
+//    public void user_clicks_on_bookstore() throws InterruptedException {
+//
+//        Thread.sleep(3000); // temporary debug
+//
+//        WebElement element = bookStorePage.bookstoreicon();
+//
+//        ((JavascriptExecutor) driver).executeScript(
+//                "arguments[0].scrollIntoView({block: 'center'});", element);
+//
+//        Thread.sleep(1000); // observe after scroll
+//
+//        element.click();
+//    }
 
     @When("books count should be {int}")
     public void books_count_should_be(Integer int1) {

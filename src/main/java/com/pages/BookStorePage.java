@@ -34,8 +34,8 @@ public class BookStorePage {
     public void findbookauthor(){
         driver.findElement(author);
     }
-    public void bookstoreicon(){
+    public WebElement bookstoreicon(){
         driver.findElement(bookstore).click();
+        return null;
     }
-
 }

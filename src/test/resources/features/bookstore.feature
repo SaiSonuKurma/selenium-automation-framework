@@ -3,6 +3,7 @@ Feature: Book Store Page feature
 Background:
 Given User is logged into the book store
 
+@smoke
 Scenario: Books count
 Given user is on profile page
 And User clicks on bookstore
