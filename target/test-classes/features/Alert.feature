@@ -1,6 +1,6 @@
 Feature: Alert Page Feature
 
-
+  @smoke
 Scenario: Alert Page
 Given user is on login page
 When User clicks on Alert, Frame & Windows

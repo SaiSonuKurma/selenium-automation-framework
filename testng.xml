@@ -1,9 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="AutomationSuite" parallel="false">
-    <test name="CucumberTests">
+<suite name="AutomationSuite" parallel="tests" thread-count="2">
+        <test name="SmokeTests">
         <parameter name="cucumber.filter.tags" value="@smoke"/>
             <classes>
                 <class name="runners.TestRunner"/>
             </classes>
+    </test>
+    <test name="RegressionTests">
+        <parameter name="cucumber.filter.tags" value="@Regression"></parameter>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
     </test>
 </suite>
