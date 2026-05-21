@@ -1,7 +1,12 @@
 package com.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AlertPage {
     private WebDriver driver;
@@ -23,7 +28,11 @@ public class AlertPage {
     }
 
     public void clickclickmebutton(){
-        driver.findElement(clickmebutton).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clickmebutton));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", driver.findElement(clickmebutton));
     }
 
     public void enterAlertText(String text){
