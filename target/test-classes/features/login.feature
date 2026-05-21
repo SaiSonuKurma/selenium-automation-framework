@@ -1,6 +1,6 @@
 Feature: Login Page feature
 
-  @Regression
+ @Regression
 Scenario: Login Page title
 Given user is on login page
 When user gets the title of the page
