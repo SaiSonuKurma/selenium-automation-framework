@@ -39,9 +39,9 @@ public class LoginPage {
     public void clickSignInButton(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(loginInButton));
-        driver.findElement(loginInButton).click();
+//        driver.findElement(loginInButton).click();
 
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click();", loginInButton);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", driver.findElement(loginInButton));
     }
 }
