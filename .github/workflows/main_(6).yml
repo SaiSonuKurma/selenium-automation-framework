@@ -1,0 +1,28 @@
+name: Cron workflow(6)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '30 0,6,12,18 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1
+
+    - name: Build with Maven
+      run: mvn clean test
